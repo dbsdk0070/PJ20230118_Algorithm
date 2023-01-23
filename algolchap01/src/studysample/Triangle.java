@@ -46,6 +46,17 @@ class Triangle {
 		}
 	}
 	
+	static void spira(int n) {
+		for(int i=1; i<=n; i++) {
+			for(int j=1; j<=n-i; j++)
+				System.out.print(" ");
+			for(int j=1; j<=(i-1)*2+1; j++)
+				//System.out.print("*");
+				System.out.print(i%10);
+			System.out.println();
+		}
+	}
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n;
@@ -70,6 +81,10 @@ class Triangle {
 		//오른쪽 아래
 		System.out.println("오른쪽 아래가 직각인 삼각형");
 		triangleRB(n);
+		
+		//n단의 피라미드 출력
+		System.out.println(n + "단의 피라미드 출력");
+		spira(n);
 	}
 }
 
